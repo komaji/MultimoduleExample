@@ -8,13 +8,13 @@ let package = Package(
     platforms: [.iOS(.v14)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(name: "FeatureALibrary", targets: ["FeatureA"]),
+        .library(name: "ListFeatureLibrary", targets: ["ListFeature"]),
         .library(name: "FeatureBLibrary", targets: ["FeatureB"])
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(name: "FeatureA", dependencies: ["Component", "Entity"]),
+        .target(name: "ListFeature", dependencies: ["Component", "Entity"]),
         .target(name: "FeatureB", dependencies: ["Component", "Network"]),
         .target(name: "Component"),
         .target(name: "Entity"),
