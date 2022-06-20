@@ -7,18 +7,30 @@
 
 import SwiftUI
 import ListFeature
+import Environment
 
 public struct RootView: View {
-    public init() {}
+    private let resolver: Resolver
+
+    public init(resolver: Resolver) {
+        self.resolver = resolver
+    }
+
     public var body: some View {
         NavigationView {
-            ListView()
+            ListView(resolver: resolver)
         }
     }
 }
 
 struct RootView_Previews: PreviewProvider {
+    struct PreviewResolver: Resolver {
+        func resolve<T>(_ descriptor: T) -> AnyView {
+            AnyView(EmptyView())
+        }
+    }
+
     static var previews: some View {
-        RootView()
+        RootView(resolver: PreviewResolver())
     }
 }
