@@ -12,8 +12,7 @@
 		7490BA1027EB3B54002092B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7490BA0F27EB3B54002092B1 /* Preview Assets.xcassets */; };
 		7490BA1B27EB3B55002092B1 /* MultiModuleExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490BA1A27EB3B55002092B1 /* MultiModuleExampleTests.swift */; };
 		7490BA2627EB3B55002092B1 /* MultiModuleExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490BA2527EB3B55002092B1 /* MultiModuleExampleUITests.swift */; };
-		74E21AC32860769900E90FE6 /* ListFeatureLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21AC22860769900E90FE6 /* ListFeatureLibrary */; };
-		74E21AC5286077F100E90FE6 /* DetailFeatureLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21AC4286077F100E90FE6 /* DetailFeatureLibrary */; };
+		74E21AC72860857300E90FE6 /* MainLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21AC62860857300E90FE6 /* MainLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74E21AC5286077F100E90FE6 /* DetailFeatureLibrary in Frameworks */,
-				74E21AC32860769900E90FE6 /* ListFeatureLibrary in Frameworks */,
+				74E21AC72860857300E90FE6 /* MainLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,8 +154,7 @@
 			);
 			name = MultiModuleExample;
 			packageProductDependencies = (
-				74E21AC22860769900E90FE6 /* ListFeatureLibrary */,
-				74E21AC4286077F100E90FE6 /* DetailFeatureLibrary */,
+				74E21AC62860857300E90FE6 /* MainLibrary */,
 			);
 			productName = MultiModuleExample;
 			productReference = 7490BA0527EB3B52002092B1 /* MultiModuleExample.app */;
@@ -594,13 +591,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		74E21AC22860769900E90FE6 /* ListFeatureLibrary */ = {
+		74E21AC62860857300E90FE6 /* MainLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = ListFeatureLibrary;
-		};
-		74E21AC4286077F100E90FE6 /* DetailFeatureLibrary */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DetailFeatureLibrary;
+			productName = MainLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -6,18 +6,13 @@
 //
 
 import SwiftUI
-import FeatureA
-import FeatureB
+import Main
 
 @main
 struct MultiModuleExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            if Int.random(in: 1...10) % 2 == 0 {
-                FeatureAView()
-            } else {
-                FeatureBView()
-            }
+            RootView()
         }
     }
 }
