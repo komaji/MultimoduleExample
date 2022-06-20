@@ -11,6 +11,6 @@ public protocol ListResolver {
     func resolveConcrete(_ descriptor: ListDescriptor) -> AnyView
 }
 
-public struct ListDescriptor {
+public struct ListDescriptor: Descriptor {
     public init() {}
 }
