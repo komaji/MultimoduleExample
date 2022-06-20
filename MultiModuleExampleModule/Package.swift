@@ -11,6 +11,7 @@ let package = Package(
         .library(name: "MainLibrary", targets: ["Main"]),
         .library(name: "ListFeatureLibrary", targets: ["ListFeature"]),
         .library(name: "DetailFeatureLibrary", targets: ["DetailFeature"]),
+        .library(name: "EnvironmentLibrary", targets: ["Environment"])
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.

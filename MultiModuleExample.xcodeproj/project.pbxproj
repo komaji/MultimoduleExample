@@ -13,6 +13,10 @@
 		7490BA1B27EB3B55002092B1 /* MultiModuleExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490BA1A27EB3B55002092B1 /* MultiModuleExampleTests.swift */; };
 		7490BA2627EB3B55002092B1 /* MultiModuleExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490BA2527EB3B55002092B1 /* MultiModuleExampleUITests.swift */; };
 		74E21AC72860857300E90FE6 /* MainLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21AC62860857300E90FE6 /* MainLibrary */; };
+		74E21AC92860A0AF00E90FE6 /* MultiModuleResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E21AC82860A0AF00E90FE6 /* MultiModuleResolver.swift */; };
+		74E21ACB2860A18900E90FE6 /* EnvironmentLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21ACA2860A18900E90FE6 /* EnvironmentLibrary */; };
+		74E21ACD2860A18F00E90FE6 /* DetailFeatureLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21ACC2860A18F00E90FE6 /* DetailFeatureLibrary */; };
+		74E21ACF2860A18F00E90FE6 /* ListFeatureLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21ACE2860A18F00E90FE6 /* ListFeatureLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,7 @@
 		7490BA2127EB3B55002092B1 /* MultiModuleExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiModuleExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7490BA2527EB3B55002092B1 /* MultiModuleExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiModuleExampleUITests.swift; sourceTree = "<group>"; };
 		7490BA2727EB3B55002092B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74E21AC82860A0AF00E90FE6 /* MultiModuleResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiModuleResolver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +56,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E21ACB2860A18900E90FE6 /* EnvironmentLibrary in Frameworks */,
+				74E21ACD2860A18F00E90FE6 /* DetailFeatureLibrary in Frameworks */,
 				74E21AC72860857300E90FE6 /* MainLibrary in Frameworks */,
+				74E21ACF2860A18F00E90FE6 /* ListFeatureLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				7490BA0827EB3B52002092B1 /* MultiModuleExampleApp.swift */,
+				74E21AC82860A0AF00E90FE6 /* MultiModuleResolver.swift */,
 				7490BA0C27EB3B54002092B1 /* Assets.xcassets */,
 				7490BA1127EB3B54002092B1 /* Info.plist */,
 				7490BA0E27EB3B54002092B1 /* Preview Content */,
@@ -155,6 +164,9 @@
 			name = MultiModuleExample;
 			packageProductDependencies = (
 				74E21AC62860857300E90FE6 /* MainLibrary */,
+				74E21ACA2860A18900E90FE6 /* EnvironmentLibrary */,
+				74E21ACC2860A18F00E90FE6 /* DetailFeatureLibrary */,
+				74E21ACE2860A18F00E90FE6 /* ListFeatureLibrary */,
 			);
 			productName = MultiModuleExample;
 			productReference = 7490BA0527EB3B52002092B1 /* MultiModuleExample.app */;
@@ -270,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7490BA0927EB3B52002092B1 /* MultiModuleExampleApp.swift in Sources */,
+				74E21AC92860A0AF00E90FE6 /* MultiModuleResolver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +607,18 @@
 		74E21AC62860857300E90FE6 /* MainLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MainLibrary;
+		};
+		74E21ACA2860A18900E90FE6 /* EnvironmentLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = EnvironmentLibrary;
+		};
+		74E21ACC2860A18F00E90FE6 /* DetailFeatureLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DetailFeatureLibrary;
+		};
+		74E21ACE2860A18F00E90FE6 /* ListFeatureLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ListFeatureLibrary;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
