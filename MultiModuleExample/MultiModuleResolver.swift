@@ -17,6 +17,8 @@ struct MultiModuleResolver: Resolver {
             return resolveConcrete(list)
         case let detail as DetailDescriptor:
             return resolveConcrete(detail)
+        case let search as SearchDescriptor:
+            return resolveConcrete(search)
         default:
             assertionFailure("Unexpected descriptor \(type(of: descriptor))")
             return AnyView(EmptyView())
@@ -26,12 +28,18 @@ struct MultiModuleResolver: Resolver {
 
 extension MultiModuleResolver: ListResolver {
     func resolveConcrete(_ descriptor: ListDescriptor) -> AnyView {
-        return AnyView(ListView(resolver: self))
+        AnyView(ListView(resolver: self, items: descriptor.items))
     }
 }
 
 extension MultiModuleResolver: DetailResolver {
     func resolveConcrete(_ descriptor: DetailDescriptor) -> AnyView {
-        return AnyView(DetailView(resolver: self, id: descriptor.id))
+        AnyView(DetailView(resolver: self, id: descriptor.id))
+    }
+}
+
+extension MultiModuleResolver: SearchResolver {
+    func resolveConcrete(_ descriptor: SearchDescriptor) -> AnyView {
+        AnyView(SearchView(resolver: self, defaultItems: descriptor.defaultItems))
     }
 }

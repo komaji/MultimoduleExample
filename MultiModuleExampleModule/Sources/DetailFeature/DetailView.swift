@@ -25,7 +25,11 @@ public struct DetailView: View {
 
             Spacer().frame(height: 44.0)
 
-            NavigationLink(destination: resolver.resolve(ListDescriptor())) {
+            NavigationLink(
+                destination: resolver.resolve(
+                    ListDescriptor(items: (0..<100).map(String.init))
+                )
+            ) {
                 Text("Go to list")
             }
         }

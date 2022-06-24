@@ -18,7 +18,7 @@ public struct RootView: View {
 
     public var body: some View {
         NavigationView {
-            ListView(resolver: resolver)
+            ListView(resolver: resolver, items: (0..<100).map(String.init))
         }
     }
 }

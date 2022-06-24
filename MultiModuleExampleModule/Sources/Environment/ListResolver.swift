@@ -12,5 +12,8 @@ public protocol ListResolver {
 }
 
 public struct ListDescriptor: Descriptor {
-    public init() {}
+    public let items: [String]
+    public init(items: [String]) {
+        self.items = items
+    }
 }
