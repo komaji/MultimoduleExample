@@ -25,6 +25,7 @@
 		74E21AE52860A5B000E90FE6 /* EnvironmentLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21AE42860A5B000E90FE6 /* EnvironmentLibrary */; };
 		74E21AE72860A5B000E90FE6 /* ListFeatureLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21AE62860A5B000E90FE6 /* ListFeatureLibrary */; };
 		74E21AE92860A5B000E90FE6 /* MainLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21AE82860A5B000E90FE6 /* MainLibrary */; };
+		74E21AEC2865508500E90FE6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E21AEB2865508500E90FE6 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		74E21AD82860A50400E90FE6 /* MultiModuleBetaResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiModuleBetaResolver.swift; sourceTree = "<group>"; };
 		74E21ADA2860A50500E90FE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74E21ADD2860A50500E90FE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		74E21AEB2865508500E90FE6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		7490BA0727EB3B52002092B1 /* MultiModuleExample */ = {
 			isa = PBXGroup;
 			children = (
+				74E21AEA2865506500E90FE6 /* SearchFeature */,
 				7490BA0827EB3B52002092B1 /* MultiModuleExampleApp.swift */,
 				74E21AC82860A0AF00E90FE6 /* MultiModuleResolver.swift */,
 				7490BA0C27EB3B54002092B1 /* Assets.xcassets */,
@@ -189,6 +192,14 @@
 				74E21ADD2860A50500E90FE6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		74E21AEA2865506500E90FE6 /* SearchFeature */ = {
+			isa = PBXGroup;
+			children = (
+				74E21AEB2865508500E90FE6 /* SearchView.swift */,
+			);
+			path = SearchFeature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7490BA0927EB3B52002092B1 /* MultiModuleExampleApp.swift in Sources */,
+				74E21AEC2865508500E90FE6 /* SearchView.swift in Sources */,
 				74E21AC92860A0AF00E90FE6 /* MultiModuleResolver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,7 +546,7 @@
 				DEVELOPMENT_TEAM = 279QG3TPXV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MultiModuleExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -556,7 +568,7 @@
 				DEVELOPMENT_TEAM = 279QG3TPXV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MultiModuleExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
