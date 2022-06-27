@@ -7,6 +7,6 @@
 
 import SwiftUI
 
-public protocol ListResolver {
-    func resolveList(items: [String]) -> AnyView
+public protocol ListBuildable {
+    func buildList(items: [String]) -> AnyView
 }

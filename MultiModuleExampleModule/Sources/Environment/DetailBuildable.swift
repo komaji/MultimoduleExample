@@ -7,6 +7,6 @@
 
 import SwiftUI
 
-public protocol DetailResolver {
-    func resolveDetail(id: Int) -> AnyView
+public protocol DetailBuildable {
+    func buildDetail(id: Int) -> AnyView
 }

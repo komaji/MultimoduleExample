@@ -12,7 +12,7 @@ import Main
 struct MultiModuleExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            RootView(resolver: MultiModuleBetaResolver())
+            RootView(builder: MultiModuleBetaBuilder())
         }
     }
 }

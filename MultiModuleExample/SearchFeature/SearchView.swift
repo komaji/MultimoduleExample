@@ -9,21 +9,21 @@ import SwiftUI
 import Environment
 
 struct SearchView: View {
-    typealias Resolver = DetailResolver
+    typealias Builder = DetailBuildable
 
-    private let resolver: Resolver
+    private let builder: Builder
 
     @ObservedObject private var viewModel: SearchViewModel
 
-    init(resolver: Resolver, viewModel: SearchViewModel) {
-        self.resolver = resolver
+    init(builder: Builder, viewModel: SearchViewModel) {
+        self.builder = builder
         self.viewModel = viewModel
     }
 
     var body: some View {
         List(viewModel.items, id: \.self) { i in
             NavigationLink(
-                destination: resolver.resolveDetail(id: Int(i) ?? 0),
+                destination: builder.buildDetail(id: Int(i) ?? 0),
                 label: { Text("\(i)") }
             )
         }
@@ -42,7 +42,7 @@ struct SearchView_Previews: PreviewProvider {
 
     static var previews: some View {
         NavigationView {
-            SearchView(resolver: previewResolver, viewModel: viewModel)
+            SearchView(builder: previewBuilder, viewModel: viewModel)
         }
     }
 }

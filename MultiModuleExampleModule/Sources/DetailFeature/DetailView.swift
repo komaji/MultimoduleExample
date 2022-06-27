@@ -11,13 +11,13 @@ import Network
 import Environment
 
 public struct DetailView: View {
-    public typealias Resolver = ListResolver
+    public typealias Builder = ListBuildable
 
-    private let resolver: Resolver
+    private let builder: Builder
     private let id: Int
 
-    public init(resolver: Resolver, id: Int) {
-        self.resolver = resolver
+    public init(builder: Builder, id: Int) {
+        self.builder = builder
         self.id = id
     }
 
@@ -28,7 +28,7 @@ public struct DetailView: View {
             Spacer().frame(height: 44.0)
 
             NavigationLink(
-                destination: resolver.resolveList(items: (0..<100).map(String.init))
+                destination: builder.buildList(items: (0..<100).map(String.init))
             ) {
                 Text("Go to list")
             }
@@ -40,7 +40,7 @@ public struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView(resolver: previewResolver, id: 1)
+            DetailView(builder: previewBuilder, id: 1)
         }
     }
 }

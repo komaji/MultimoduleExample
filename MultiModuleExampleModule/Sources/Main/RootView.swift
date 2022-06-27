@@ -9,23 +9,23 @@ import SwiftUI
 import Environment
 
 public struct RootView: View {
-    public typealias Resolver = ListResolver
+    public typealias Builder = ListBuildable
 
-    private let resolver: Resolver
+    private let builder: Builder
 
-    public init(resolver: Resolver) {
-        self.resolver = resolver
+    public init(builder: Builder) {
+        self.builder = builder
     }
 
     public var body: some View {
         NavigationView {
-            resolver.resolveList(items: (0..<100).map(String.init))
+            builder.buildList(items: (0..<100).map(String.init))
         }
     }
 }
 
 struct RootView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView(resolver: previewResolver)
+        RootView(builder: previewBuilder)
     }
 }

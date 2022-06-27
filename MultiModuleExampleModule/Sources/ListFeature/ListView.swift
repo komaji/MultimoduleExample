@@ -10,27 +10,27 @@ import Component
 import Environment
 
 public struct ListView: View {
-    public typealias Resolver = DetailResolver & SearchResolver
+    public typealias Builder = DetailBuildable & SearchBuildable
 
-    private let resolver: Resolver
+    private let builder: Builder
 
     @ObservedObject private var viewModel: ListViewModel
 
-    public init(resolver: Resolver, viewModel: ListViewModel) {
-        self.resolver = resolver
+    public init(builder: Builder, viewModel: ListViewModel) {
+        self.builder = builder
         self.viewModel = viewModel
     }
 
     public var body: some View {
         VStack {
             List(viewModel.items, id: \.self) { i in
-                NavigationLink(destination: resolver.resolveDetail(id: Int(i) ?? 0)) {
+                NavigationLink(destination: builder.buildDetail(id: Int(i) ?? 0)) {
                     Text("\(i)")
                 }
             }
 
             NavigationLink(
-                destination: resolver.resolveSearch(defaultItems: viewModel.items),
+                destination: builder.buildSearch(defaultItems: viewModel.items),
                 label: {
                     Text("Enable to search")
                 }
@@ -46,7 +46,7 @@ struct ListView_Previews: PreviewProvider {
 
     static var previews: some View {
         NavigationView {
-            ListView(resolver: previewResolver, viewModel: viewModel)
+            ListView(builder: previewBuilder, viewModel: viewModel)
         }
     }
 }
