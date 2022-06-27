@@ -11,23 +11,24 @@ import Environment
 
 public struct ListView: View {
     private let resolver: Resolver
-    private let items: [String]
 
-    public init(resolver: Resolver, items: [String]) {
+    @ObservedObject private var viewModel: ListViewModel
+
+    public init(resolver: Resolver, viewModel: ListViewModel) {
         self.resolver = resolver
-        self.items = items
+        self.viewModel = viewModel
     }
 
     public var body: some View {
         VStack {
-            List(items, id: \.self) { i in
+            List(viewModel.items, id: \.self) { i in
                 NavigationLink(destination: resolver.resolve(DetailDescriptor(id: Int(i) ?? 0))) {
                     Text("\(i)")
                 }
             }
 
             NavigationLink(
-                destination: resolver.resolve(SearchDescriptor(defaultItems: items)),
+                destination: resolver.resolve(SearchDescriptor(defaultItems: viewModel.items)),
                 label: {
                     Text("Enable to search")
                 }
@@ -60,10 +61,11 @@ struct ListView_Previews: PreviewProvider {
     }
 
     static private let items = (0..<1).map(String.init)
+    static private let viewModel = ListViewModel(items: items)
 
     static var previews: some View {
         NavigationView {
-            ListView(resolver: PreviewResolver(), items: Self.items)
+            ListView(resolver: PreviewResolver(), viewModel: viewModel)
         }
     }
 }

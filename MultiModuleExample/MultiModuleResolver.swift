@@ -28,7 +28,8 @@ struct MultiModuleResolver: Resolver {
 
 extension MultiModuleResolver: ListResolver {
     func resolveConcrete(_ descriptor: ListDescriptor) -> AnyView {
-        AnyView(ListView(resolver: self, items: descriptor.items))
+        let viewModel = ListViewModel(items: descriptor.items)
+        return AnyView(ListView(resolver: self, viewModel: viewModel))
     }
 }
 

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import ListFeature
 import Environment
 
 public struct RootView: View {
@@ -18,7 +17,7 @@ public struct RootView: View {
 
     public var body: some View {
         NavigationView {
-            ListView(resolver: resolver, items: (0..<100).map(String.init))
+            resolver.resolve(ListDescriptor(items: (0..<100).map(String.init)))
         }
     }
 }
