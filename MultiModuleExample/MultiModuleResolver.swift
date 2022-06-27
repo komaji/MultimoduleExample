@@ -41,6 +41,7 @@ extension MultiModuleResolver: DetailResolver {
 
 extension MultiModuleResolver: SearchResolver {
     func resolveConcrete(_ descriptor: SearchDescriptor) -> AnyView {
-        AnyView(SearchView(resolver: self, defaultItems: descriptor.defaultItems))
+        let viewModel = SearchViewModel(defaultItems: descriptor.defaultItems)
+        return AnyView(SearchView(resolver: self, viewModel: viewModel))
     }
 }

@@ -12,6 +12,7 @@
 		7490BA1027EB3B54002092B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7490BA0F27EB3B54002092B1 /* Preview Assets.xcassets */; };
 		7490BA1B27EB3B55002092B1 /* MultiModuleExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490BA1A27EB3B55002092B1 /* MultiModuleExampleTests.swift */; };
 		7490BA2627EB3B55002092B1 /* MultiModuleExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490BA2527EB3B55002092B1 /* MultiModuleExampleUITests.swift */; };
+		749C92CF2869AA09002B7C10 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749C92CE2869AA09002B7C10 /* SearchViewModel.swift */; };
 		74E21AC72860857300E90FE6 /* MainLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21AC62860857300E90FE6 /* MainLibrary */; };
 		74E21AC92860A0AF00E90FE6 /* MultiModuleResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E21AC82860A0AF00E90FE6 /* MultiModuleResolver.swift */; };
 		74E21ACB2860A18900E90FE6 /* EnvironmentLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21ACA2860A18900E90FE6 /* EnvironmentLibrary */; };
@@ -57,6 +58,7 @@
 		7490BA2127EB3B55002092B1 /* MultiModuleExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiModuleExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7490BA2527EB3B55002092B1 /* MultiModuleExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiModuleExampleUITests.swift; sourceTree = "<group>"; };
 		7490BA2727EB3B55002092B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		749C92CE2869AA09002B7C10 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		74E21AC82860A0AF00E90FE6 /* MultiModuleResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiModuleResolver.swift; sourceTree = "<group>"; };
 		74E21AD42860A50400E90FE6 /* MultiModuleExampleBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiModuleExampleBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E21AD62860A50400E90FE6 /* MultiModuleExampleBetaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiModuleExampleBetaApp.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				74E21AEB2865508500E90FE6 /* SearchView.swift */,
+				749C92CE2869AA09002B7C10 /* SearchViewModel.swift */,
 			);
 			path = SearchFeature;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			files = (
 				7490BA0927EB3B52002092B1 /* MultiModuleExampleApp.swift in Sources */,
 				74E21AEC2865508500E90FE6 /* SearchView.swift in Sources */,
+				749C92CF2869AA09002B7C10 /* SearchViewModel.swift in Sources */,
 				74E21AC92860A0AF00E90FE6 /* MultiModuleResolver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

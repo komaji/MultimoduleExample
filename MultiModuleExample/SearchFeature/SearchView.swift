@@ -9,20 +9,17 @@ import SwiftUI
 import Environment
 
 struct SearchView: View {
-    @State private var keyword = ""
-    @State private var items: [String]
-
     private let resolver: Resolver
-    private let defaultItems: [String]
 
-    init(resolver: Resolver = MultiModuleResolver(), defaultItems: [String]) {
+    @ObservedObject private var viewModel: SearchViewModel
+
+    init(resolver: Resolver = MultiModuleResolver(), viewModel: SearchViewModel) {
         self.resolver = resolver
-        self.defaultItems = defaultItems
-        _items = .init(initialValue: defaultItems)
+        self.viewModel = viewModel
     }
 
     var body: some View {
-        List(items, id: \.self) { i in
+        List(viewModel.items, id: \.self) { i in
             NavigationLink(
                 destination: resolver.resolve(DetailDescriptor(id: Int(i) ?? 0)),
                 label: { Text("\(i)") }
@@ -30,16 +27,10 @@ struct SearchView: View {
         }
         .navigationTitle("Search")
         .searchable(
-            text: $keyword,
+            text: $viewModel.keyword,
             placement: .navigationBarDrawer(displayMode: .always)
         )
-        .onChange(of: keyword) { text in
-            if keyword.isEmpty {
-                items = defaultItems
-            } else {
-                items = defaultItems.filter { $0.contains(text) }
-            }
-        }
+        .onChange(of: viewModel.keyword, perform: viewModel.onChangeKeyword)
     }
 }
 
@@ -60,10 +51,11 @@ struct SearchView_Previews: PreviewProvider {
     }
 
     static private let items = (0..<1).map(String.init)
+    static private let viewModel = SearchViewModel(defaultItems: items)
 
     static var previews: some View {
         NavigationView {
-            SearchView(resolver: PreviewResolver(), defaultItems: items)
+            SearchView(resolver: PreviewResolver(), viewModel: viewModel)
         }
     }
 }
