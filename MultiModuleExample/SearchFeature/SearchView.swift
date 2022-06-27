@@ -35,27 +35,12 @@ struct SearchView: View {
 }
 
 struct SearchView_Previews: PreviewProvider {
-    struct PreviewResolver: Resolver, DetailResolver {
-        func resolve<T>(_ descriptor: T) -> AnyView {
-            switch descriptor {
-            case let detail as DetailDescriptor:
-                return resolveConcrete(detail)
-            default:
-                return AnyView(Text("Unexpected"))
-            }
-        }
-
-        func resolveConcrete(_ descriptor: DetailDescriptor) -> AnyView {
-            AnyView(Color.blue)
-        }
-    }
-
-    static private let items = (0..<1).map(String.init)
+    static private let items = (0..<100).map(String.init)
     static private let viewModel = SearchViewModel(defaultItems: items)
 
     static var previews: some View {
         NavigationView {
-            SearchView(resolver: PreviewResolver(), viewModel: viewModel)
+            SearchView(resolver: previewResolver, viewModel: viewModel)
         }
     }
 }

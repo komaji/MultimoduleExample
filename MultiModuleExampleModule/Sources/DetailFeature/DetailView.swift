@@ -38,23 +38,9 @@ public struct DetailView: View {
 }
 
 struct DetailView_Previews: PreviewProvider {
-    struct PreviewResolver: Resolver, ListResolver {
-        func resolve<T>(_ descriptor: T) -> AnyView {
-            if let descriptor = descriptor as? ListDescriptor {
-                return resolveConcrete(descriptor)
-            } else {
-                return AnyView(Text("Unexpected"))
-            }
-        }
-
-        func resolveConcrete(_ descriptor: ListDescriptor) -> AnyView {
-            return AnyView(Color.green)
-        }
-    }
-
     static var previews: some View {
         NavigationView {
-            DetailView(resolver: PreviewResolver(), id: 1)
+            DetailView(resolver: previewResolver, id: 1)
         }
     }
 }

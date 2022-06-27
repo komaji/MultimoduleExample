@@ -23,13 +23,7 @@ public struct RootView: View {
 }
 
 struct RootView_Previews: PreviewProvider {
-    struct PreviewResolver: Resolver {
-        func resolve<T>(_ descriptor: T) -> AnyView {
-            AnyView(EmptyView())
-        }
-    }
-
     static var previews: some View {
-        RootView(resolver: PreviewResolver())
+        RootView(resolver: previewResolver)
     }
 }

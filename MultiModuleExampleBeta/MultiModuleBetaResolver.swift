@@ -15,8 +15,6 @@ struct MultiModuleBetaResolver: Resolver {
         switch descriptor {
         case let list as ListDescriptor:
             return resolveConcrete(list)
-        case let detail as DetailDescriptor:
-            return resolveConcrete(detail)
         default:
             assertionFailure("Unexpected descriptor \(type(of: descriptor))")
             return AnyView(EmptyView())
@@ -26,12 +24,6 @@ struct MultiModuleBetaResolver: Resolver {
 
 extension MultiModuleBetaResolver: ListResolver {
     func resolveConcrete(_ descriptor: ListDescriptor) -> AnyView {
-        return AnyView(Color.red)
-    }
-}
-
-extension MultiModuleBetaResolver: DetailResolver {
-    func resolveConcrete(_ descriptor: DetailDescriptor) -> AnyView {
-        return AnyView(DetailView(resolver: self, id: descriptor.id))
+        AnyView(Color.red)
     }
 }
