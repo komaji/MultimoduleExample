@@ -19,7 +19,7 @@ public struct RootView: View {
 
     public var body: some View {
         NavigationView {
-            resolver.resolve(ListDescriptor(items: (0..<100).map(String.init)))
+            resolver.resolveList(items: (0..<100).map(String.init))
         }
     }
 }

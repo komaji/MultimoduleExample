@@ -13,7 +13,7 @@ import SwiftUI
 struct MultiModuleBetaResolver {}
 
 extension MultiModuleBetaResolver: ListResolver {
-    func resolve(_ descriptor: ListDescriptor) -> AnyView {
+    func resolveList(items: [String]) -> AnyView {
         AnyView(Color.red)
     }
 }

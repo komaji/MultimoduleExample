@@ -24,13 +24,13 @@ public struct ListView: View {
     public var body: some View {
         VStack {
             List(viewModel.items, id: \.self) { i in
-                NavigationLink(destination: resolver.resolve(DetailDescriptor(id: Int(i) ?? 0))) {
+                NavigationLink(destination: resolver.resolveDetail(id: Int(i) ?? 0)) {
                     Text("\(i)")
                 }
             }
 
             NavigationLink(
-                destination: resolver.resolve(SearchDescriptor(defaultItems: viewModel.items)),
+                destination: resolver.resolveSearch(defaultItems: viewModel.items),
                 label: {
                     Text("Enable to search")
                 }

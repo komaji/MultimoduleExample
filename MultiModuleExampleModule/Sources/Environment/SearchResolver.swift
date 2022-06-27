@@ -8,12 +8,5 @@
 import SwiftUI
 
 public protocol SearchResolver {
-    func resolve(_ descriptor: SearchDescriptor) -> AnyView
-}
-
-public struct SearchDescriptor {
-    public let defaultItems: [String]
-    public init(defaultItems: [String]) {
-        self.defaultItems = defaultItems
-    }
+    func resolveSearch(defaultItems: [String]) -> AnyView
 }

@@ -7,18 +7,19 @@
 
 import SwiftUI
 
+// 自動生成
 public protocol PreviewResolver: ListResolver & DetailResolver & SearchResolver {}
 
 struct PreviewResolverImpl: PreviewResolver {
-    func resolve(_ descriptor: ListDescriptor) -> AnyView {
+    func resolveList(items: [String]) -> AnyView {
         AnyView(Color.green)
     }
 
-    func resolve(_ descriptor: DetailDescriptor) -> AnyView {
+    func resolveDetail(id: Int) -> AnyView {
         AnyView(Color.green)
     }
 
-    func resolve(_ descriptor: SearchDescriptor) -> AnyView {
+    func resolveSearch(defaultItems: [String]) -> AnyView {
         AnyView(Color.green)
     }
 }

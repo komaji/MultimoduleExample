@@ -13,21 +13,21 @@ import SwiftUI
 struct MultiModuleResolver {}
 
 extension MultiModuleResolver: ListResolver {
-    func resolve(_ descriptor: ListDescriptor) -> AnyView {
-        let viewModel = ListViewModel(items: descriptor.items)
+    func resolveList(items: [String]) -> AnyView {
+        let viewModel = ListViewModel(items: items)
         return AnyView(ListView(resolver: self, viewModel: viewModel))
     }
 }
 
 extension MultiModuleResolver: DetailResolver {
-    func resolve(_ descriptor: DetailDescriptor) -> AnyView {
-        AnyView(DetailView(resolver: self, id: descriptor.id))
+    func resolveDetail(id: Int) -> AnyView {
+        AnyView(DetailView(resolver: self, id: id))
     }
 }
 
 extension MultiModuleResolver: SearchResolver {
-    func resolve(_ descriptor: SearchDescriptor) -> AnyView {
-        let viewModel = SearchViewModel(defaultItems: descriptor.defaultItems)
+    func resolveSearch(defaultItems: [String]) -> AnyView {
+        let viewModel = SearchViewModel(defaultItems: defaultItems)
         return AnyView(SearchView(resolver: self, viewModel: viewModel))
     }
 }

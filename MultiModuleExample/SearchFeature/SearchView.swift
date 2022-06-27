@@ -23,7 +23,7 @@ struct SearchView: View {
     var body: some View {
         List(viewModel.items, id: \.self) { i in
             NavigationLink(
-                destination: resolver.resolve(DetailDescriptor(id: Int(i) ?? 0)),
+                destination: resolver.resolveDetail(id: Int(i) ?? 0),
                 label: { Text("\(i)") }
             )
         }
