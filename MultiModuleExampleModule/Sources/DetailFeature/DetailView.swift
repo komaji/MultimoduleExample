@@ -11,6 +11,8 @@ import Network
 import Environment
 
 public struct DetailView: View {
+    public typealias Resolver = ListResolver
+
     private let resolver: Resolver
     private let id: Int
 

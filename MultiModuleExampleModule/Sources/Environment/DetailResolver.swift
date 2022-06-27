@@ -8,10 +8,10 @@
 import SwiftUI
 
 public protocol DetailResolver {
-    func resolveConcrete(_ descriptor: DetailDescriptor) -> AnyView
+    func resolve(_ descriptor: DetailDescriptor) -> AnyView
 }
 
-public struct DetailDescriptor: Descriptor {
+public struct DetailDescriptor {
     public let id: Int
     public init(id: Int) {
         self.id = id

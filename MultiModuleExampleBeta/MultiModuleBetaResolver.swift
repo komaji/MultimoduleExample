@@ -10,20 +10,10 @@ import DetailFeature
 import ListFeature
 import SwiftUI
 
-struct MultiModuleBetaResolver: Resolver {
-    func resolve<T>(_ descriptor: T) -> AnyView {
-        switch descriptor {
-        case let list as ListDescriptor:
-            return resolveConcrete(list)
-        default:
-            assertionFailure("Unexpected descriptor \(type(of: descriptor))")
-            return AnyView(EmptyView())
-        }
-    }
-}
+struct MultiModuleBetaResolver {}
 
 extension MultiModuleBetaResolver: ListResolver {
-    func resolveConcrete(_ descriptor: ListDescriptor) -> AnyView {
+    func resolve(_ descriptor: ListDescriptor) -> AnyView {
         AnyView(Color.red)
     }
 }

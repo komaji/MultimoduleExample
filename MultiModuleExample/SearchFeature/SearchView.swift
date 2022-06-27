@@ -9,11 +9,13 @@ import SwiftUI
 import Environment
 
 struct SearchView: View {
+    typealias Resolver = DetailResolver
+
     private let resolver: Resolver
 
     @ObservedObject private var viewModel: SearchViewModel
 
-    init(resolver: Resolver = MultiModuleResolver(), viewModel: SearchViewModel) {
+    init(resolver: Resolver, viewModel: SearchViewModel) {
         self.resolver = resolver
         self.viewModel = viewModel
     }

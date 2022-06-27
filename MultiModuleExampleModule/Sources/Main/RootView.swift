@@ -9,6 +9,8 @@ import SwiftUI
 import Environment
 
 public struct RootView: View {
+    public typealias Resolver = ListResolver
+
     private let resolver: Resolver
 
     public init(resolver: Resolver) {

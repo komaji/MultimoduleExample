@@ -10,6 +10,8 @@ import Component
 import Environment
 
 public struct ListView: View {
+    public typealias Resolver = DetailResolver & SearchResolver
+
     private let resolver: Resolver
 
     @ObservedObject private var viewModel: ListViewModel

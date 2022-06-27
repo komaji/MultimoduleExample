@@ -7,12 +7,22 @@
 
 import SwiftUI
 
-public extension PreviewProvider {
-    static var previewResolver: some Resolver { PreviewResolver() }
-}
+public protocol PreviewResolver: ListResolver & DetailResolver & SearchResolver {}
 
-struct PreviewResolver: Resolver {
-    func resolve<T: Descriptor>(_ descriptor: T) -> AnyView {
+struct PreviewResolverImpl: PreviewResolver {
+    func resolve(_ descriptor: ListDescriptor) -> AnyView {
         AnyView(Color.green)
     }
+
+    func resolve(_ descriptor: DetailDescriptor) -> AnyView {
+        AnyView(Color.green)
+    }
+
+    func resolve(_ descriptor: SearchDescriptor) -> AnyView {
+        AnyView(Color.green)
+    }
+}
+
+public extension PreviewProvider {
+    static var previewResolver: some PreviewResolver { PreviewResolverImpl() }
 }

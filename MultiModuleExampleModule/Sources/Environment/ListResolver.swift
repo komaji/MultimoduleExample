@@ -8,10 +8,10 @@
 import SwiftUI
 
 public protocol ListResolver {
-    func resolveConcrete(_ descriptor: ListDescriptor) -> AnyView
+    func resolve(_ descriptor: ListDescriptor) -> AnyView
 }
 
-public struct ListDescriptor: Descriptor {
+public struct ListDescriptor {
     public let items: [String]
     public init(items: [String]) {
         self.items = items
