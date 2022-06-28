@@ -30,7 +30,7 @@ public struct ListView: View {
             }
 
             NavigationLink(
-                destination: builder.buildSearch(defaultItems: viewModel.items),
+                destination: builder.buildSearch(),
                 label: {
                     Text("Enable to search")
                 }

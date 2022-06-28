@@ -8,19 +8,19 @@
 import SwiftUI
 import Environment
 
-struct SearchView: View {
-    typealias Builder = DetailBuildable
+public struct SearchView<T: SearchViewModelProtocol>: View {
+    public typealias Builder = DetailBuildable
 
     private let builder: Builder
 
-    @ObservedObject private var viewModel: SearchViewModel
+    @ObservedObject private var viewModel: T
 
-    init(builder: Builder, viewModel: SearchViewModel) {
+    public init(builder: Builder, viewModel: T) {
         self.builder = builder
         self.viewModel = viewModel
     }
 
-    var body: some View {
+    public var body: some View {
         List(viewModel.items, id: \.self) { i in
             NavigationLink(
                 destination: builder.buildDetail(id: Int(i) ?? 0),
@@ -37,8 +37,13 @@ struct SearchView: View {
 }
 
 struct SearchView_Previews: PreviewProvider {
-    static private let items = (0..<100).map(String.init)
-    static private let viewModel = SearchViewModel(apiClient: ListAPIClient())
+    class ViewModel: SearchViewModelProtocol {
+        var keyword: String = ""
+        var items: [String] = (0..<100).map(String.init)
+        func onChangeKeyword(_ keyword: String) {}
+    }
+
+    static private let viewModel = ViewModel()
 
     static var previews: some View {
         NavigationView {

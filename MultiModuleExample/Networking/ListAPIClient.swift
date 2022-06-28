@@ -6,10 +6,7 @@
 //
 
 import Foundation
-
-protocol ListAPIClientProtocol {
-    func fetchList() -> [String]
-}
+import Environment
 
 struct ListAPIClient: ListAPIClientProtocol {
     func fetchList() -> [String] {

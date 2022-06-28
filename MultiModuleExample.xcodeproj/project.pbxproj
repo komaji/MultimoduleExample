@@ -12,10 +12,10 @@
 		7490BA1027EB3B54002092B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7490BA0F27EB3B54002092B1 /* Preview Assets.xcassets */; };
 		7490BA1B27EB3B55002092B1 /* MultiModuleExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490BA1A27EB3B55002092B1 /* MultiModuleExampleTests.swift */; };
 		7490BA2627EB3B55002092B1 /* MultiModuleExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490BA2527EB3B55002092B1 /* MultiModuleExampleUITests.swift */; };
-		749C92CF2869AA09002B7C10 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749C92CE2869AA09002B7C10 /* SearchViewModel.swift */; };
 		749C92D12869CF7C002B7C10 /* MultiModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749C92D02869CF7C002B7C10 /* MultiModuleBuilder.swift */; };
 		749C92D32869CF93002B7C10 /* MultiModuleBetaBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749C92D22869CF93002B7C10 /* MultiModuleBetaBuilder.swift */; };
 		749C92D6286ACDB2002B7C10 /* ListAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749C92D5286ACDB2002B7C10 /* ListAPIClient.swift */; };
+		749C92D8286AD0B8002B7C10 /* SearchFeatureLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 749C92D7286AD0B8002B7C10 /* SearchFeatureLibrary */; };
 		74E21AC72860857300E90FE6 /* MainLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21AC62860857300E90FE6 /* MainLibrary */; };
 		74E21ACB2860A18900E90FE6 /* EnvironmentLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21ACA2860A18900E90FE6 /* EnvironmentLibrary */; };
 		74E21ACD2860A18F00E90FE6 /* DetailFeatureLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21ACC2860A18F00E90FE6 /* DetailFeatureLibrary */; };
@@ -27,7 +27,6 @@
 		74E21AE52860A5B000E90FE6 /* EnvironmentLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21AE42860A5B000E90FE6 /* EnvironmentLibrary */; };
 		74E21AE72860A5B000E90FE6 /* ListFeatureLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21AE62860A5B000E90FE6 /* ListFeatureLibrary */; };
 		74E21AE92860A5B000E90FE6 /* MainLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 74E21AE82860A5B000E90FE6 /* MainLibrary */; };
-		74E21AEC2865508500E90FE6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E21AEB2865508500E90FE6 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +58,6 @@
 		7490BA2127EB3B55002092B1 /* MultiModuleExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiModuleExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7490BA2527EB3B55002092B1 /* MultiModuleExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiModuleExampleUITests.swift; sourceTree = "<group>"; };
 		7490BA2727EB3B55002092B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		749C92CE2869AA09002B7C10 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		749C92D02869CF7C002B7C10 /* MultiModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiModuleBuilder.swift; sourceTree = "<group>"; };
 		749C92D22869CF93002B7C10 /* MultiModuleBetaBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiModuleBetaBuilder.swift; sourceTree = "<group>"; };
 		749C92D5286ACDB2002B7C10 /* ListAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAPIClient.swift; sourceTree = "<group>"; };
@@ -67,7 +65,6 @@
 		74E21AD62860A50400E90FE6 /* MultiModuleExampleBetaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiModuleExampleBetaApp.swift; sourceTree = "<group>"; };
 		74E21ADA2860A50500E90FE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74E21ADD2860A50500E90FE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		74E21AEB2865508500E90FE6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74E21ACB2860A18900E90FE6 /* EnvironmentLibrary in Frameworks */,
+				749C92D8286AD0B8002B7C10 /* SearchFeatureLibrary in Frameworks */,
 				74E21ACD2860A18F00E90FE6 /* DetailFeatureLibrary in Frameworks */,
 				74E21AC72860857300E90FE6 /* MainLibrary in Frameworks */,
 				74E21ACF2860A18F00E90FE6 /* ListFeatureLibrary in Frameworks */,
@@ -138,7 +136,6 @@
 			children = (
 				749C92D4286ACD9C002B7C10 /* Networking */,
 				749C92D02869CF7C002B7C10 /* MultiModuleBuilder.swift */,
-				74E21AEA2865506500E90FE6 /* SearchFeature */,
 				7490BA0827EB3B52002092B1 /* MultiModuleExampleApp.swift */,
 				7490BA0C27EB3B54002092B1 /* Assets.xcassets */,
 				7490BA1127EB3B54002092B1 /* Info.plist */,
@@ -207,15 +204,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		74E21AEA2865506500E90FE6 /* SearchFeature */ = {
-			isa = PBXGroup;
-			children = (
-				74E21AEB2865508500E90FE6 /* SearchView.swift */,
-				749C92CE2869AA09002B7C10 /* SearchViewModel.swift */,
-			);
-			path = SearchFeature;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,6 +225,7 @@
 				74E21ACA2860A18900E90FE6 /* EnvironmentLibrary */,
 				74E21ACC2860A18F00E90FE6 /* DetailFeatureLibrary */,
 				74E21ACE2860A18F00E90FE6 /* ListFeatureLibrary */,
+				749C92D7286AD0B8002B7C10 /* SearchFeatureLibrary */,
 			);
 			productName = MultiModuleExample;
 			productReference = 7490BA0527EB3B52002092B1 /* MultiModuleExample.app */;
@@ -388,8 +377,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7490BA0927EB3B52002092B1 /* MultiModuleExampleApp.swift in Sources */,
-				74E21AEC2865508500E90FE6 /* SearchView.swift in Sources */,
-				749C92CF2869AA09002B7C10 /* SearchViewModel.swift in Sources */,
 				749C92D12869CF7C002B7C10 /* MultiModuleBuilder.swift in Sources */,
 				749C92D6286ACDB2002B7C10 /* ListAPIClient.swift in Sources */,
 			);
@@ -791,6 +778,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		749C92D7286AD0B8002B7C10 /* SearchFeatureLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SearchFeatureLibrary;
+		};
 		74E21AC62860857300E90FE6 /* MainLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MainLibrary;

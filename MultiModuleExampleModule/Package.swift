@@ -1,16 +1,17 @@
-// swift-tools-version:5.4
+// swift-tools-version:5.5
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
     name: "MultiModuleExampleModule",
-    platforms: [.iOS(.v14)],
+    platforms: [.iOS(.v15)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(name: "MainLibrary", targets: ["Main"]),
         .library(name: "ListFeatureLibrary", targets: ["ListFeature"]),
         .library(name: "DetailFeatureLibrary", targets: ["DetailFeature"]),
+        .library(name: "SearchFeatureLibrary", targets: ["SearchFeature"]),
         .library(name: "EnvironmentLibrary", targets: ["Environment"])
     ],
     targets: [
@@ -19,6 +20,7 @@ let package = Package(
         .target(name: "Main", dependencies: ["Environment"]),
         .target(name: "ListFeature", dependencies: ["Component", "Entity", "Environment"]),
         .target(name: "DetailFeature", dependencies: ["Component", "Network", "Environment"]),
+        .target(name: "SearchFeature", dependencies: ["Environment"]),
         .target(name: "Component"),
         .target(name: "Entity"),
         .target(name: "Network", dependencies: ["Entity"]),

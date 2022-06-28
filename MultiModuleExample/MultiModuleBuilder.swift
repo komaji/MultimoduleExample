@@ -8,6 +8,7 @@
 import Environment
 import DetailFeature
 import ListFeature
+import SearchFeature
 import SwiftUI
 
 struct MultiModuleBuilder {}
