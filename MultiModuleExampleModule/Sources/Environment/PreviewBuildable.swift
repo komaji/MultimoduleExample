@@ -19,7 +19,7 @@ struct PreviewBuilder: PreviewBuildable {
         AnyView(Color.green)
     }
 
-    func buildSearch(defaultItems: [String]) -> AnyView {
+    func buildSearch() -> AnyView {
         AnyView(Color.green)
     }
 }

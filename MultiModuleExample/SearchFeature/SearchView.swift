@@ -38,7 +38,7 @@ struct SearchView: View {
 
 struct SearchView_Previews: PreviewProvider {
     static private let items = (0..<100).map(String.init)
-    static private let viewModel = SearchViewModel(defaultItems: items)
+    static private let viewModel = SearchViewModel(apiClient: ListAPIClient())
 
     static var previews: some View {
         NavigationView {

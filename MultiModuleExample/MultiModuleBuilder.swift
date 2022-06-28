@@ -26,8 +26,8 @@ extension MultiModuleBuilder: DetailBuildable {
 }
 
 extension MultiModuleBuilder: SearchBuildable {
-    func buildSearch(defaultItems: [String]) -> AnyView {
-        let viewModel = SearchViewModel(defaultItems: defaultItems)
+    func buildSearch() -> AnyView {
+        let viewModel = SearchViewModel(apiClient: ListAPIClient())
         return AnyView(SearchView(builder: self, viewModel: viewModel))
     }
 }

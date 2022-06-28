@@ -13,8 +13,8 @@ class SearchViewModel: ObservableObject {
 
     private let defaultItems: [String]
 
-    init(defaultItems: [String]) {
-        self.defaultItems = defaultItems
+    init(apiClient: ListAPIClientProtocol) {
+        self.defaultItems = apiClient.fetchList()
         _items = .init(initialValue: defaultItems)
     }
 

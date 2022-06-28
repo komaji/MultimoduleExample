@@ -8,5 +8,5 @@
 import SwiftUI
 
 public protocol SearchBuildable {
-    func buildSearch(defaultItems: [String]) -> AnyView
+    func buildSearch() -> AnyView
 }
